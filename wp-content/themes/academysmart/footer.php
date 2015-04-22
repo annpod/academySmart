@@ -36,7 +36,7 @@
                         <a href="mailto:info@smart-academy.com"><i class="fa fa-envelope"></i> info@smart-academy.com</a>
                         <span><i class="fa fa-phone"></i> +38 057 762-66-69</span>
 						<?php $page = get_page_by_title("Contacts"); ?>
-						<a class="#directions" href="<?php echo get_permalink($page->ID); ?>#direction"><i class="fa fa-map-marker"></i> Directions to our office</a>
+						<a class="directions" href="<?php echo get_permalink($page->ID); ?>#direction"><i class="fa fa-map-marker"></i> Directions to our office</a>
                     </div>
                     <div class="copyright">
                         &copy;<?php echo date('Y')?> Academy Smart LTD

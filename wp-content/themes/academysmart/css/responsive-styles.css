@@ -25,8 +25,8 @@
         font-size:30px;
         line-height:30px;
     }
-	.bx-wrapper .bx-prev {left:-20px;}
-	.bx-wrapper .bx-next {right:-20px;}
+	.bx-wrapper .bx-prev {left:-10px;}
+	.bx-wrapper .bx-next {right:-10px;}
     h2{
         font-size:20px;
     }
@@ -43,7 +43,7 @@
     .title h2{
         top:10px;
     }
-    .project-info .description {padding:15px;}
+    .project-info .description-content {padding:15px;}
     form.wpcf7-form input ,
     form.wpcf7-form textarea,
     form.wpcf7-form input.wpcf7-submit{
@@ -100,7 +100,7 @@
         max-width:460px;
         max-height:460px;
     }
-    .project-info .description{
+    .project-info .description-content{
         padding:15px 15px 15px 25px;
         font-size:12px;
     }
@@ -180,7 +180,59 @@
     }
      .why-we-blok {      
     }
-    .btn.btn-navbar{
+    
+   
+    /*slider*/
+    .bx-wrapper .bx-controls-direction a{
+       // width:20px;
+       // height: 20px;
+    }
+    .project-info .description p {
+        font-size: 12px;
+        margin-bottom:0px;
+        padding: 0px;
+    }
+    .other-progects .bx-wrapper .bx-controls-direction a.bx-prev  {
+        left: -17px;
+        top:55%;
+    }
+    .other-progects .bx-wrapper .bx-controls-direction a.bx-next  {
+        right: -19px;
+        top:55%;
+    }
+    .project-info .bx-wrapper .bx-controls-direction a {
+    }
+   .project-info  .bx-wrapper .bx-prev {
+    }
+    .project-info .bx-wrapper .bx-next {
+    }
+    .project-info .contact-us {
+        height: 80px;
+        position: absolute;
+        right: 50px;
+        text-indent: -99999px;
+        width: 250px;
+        bottom:-30px;
+    }
+    .project-info .contact-us img{
+        width:70%;
+        height: 70%;
+    }
+    form.wpcf7-form input, 
+    form.wpcf7-form textarea, 
+    form.wpcf7-form input.wpcf7-submit {
+        min-width: 250px;
+    }
+    .contact-list .download-presentation {
+        width: 50%;
+    }
+
+}
+
+@media(max-width:865px){
+
+
+.btn.btn-navbar{
         display:block;
     }
     .main-nav .nav li.active.portfolio > a:before{display: none;}
@@ -191,7 +243,7 @@
         position: absolute;
         right: 10px;
         text-align: left;
-        top: 29px;
+        top: 32px;
         width: 150px;
         z-index:100;
         background: #cccccc; /* Old browsers */
@@ -255,7 +307,8 @@
         display: block;
         height:30px;
     }
-    .main-nav .nav li.portfolio > a:after{
+	
+	 .main-nav .nav li.portfolio > a:after{
         content:"";
         width:0px;
         height:0px;
@@ -287,62 +340,9 @@
        color: #aaa;
        font-size: 30px;
    }  
-    /*slider*/
-    .bx-wrapper .bx-controls-direction a{
-        width:28px;
-        height: 28px;
-    }
-    .project-info .description p {
-        font-size: 12px;
-        margin-bottom:0px;
-        padding: 0px;
-    }
-    .other-progects .bx-wrapper .bx-controls-direction a.bx-prev  {
-        left: -17px;
-        top:55%;
-    }
-    .other-progects .bx-wrapper .bx-controls-direction a.bx-next  {
-        right: -25px;
-        top:55%;
-    }
-    .project-info .bx-wrapper .bx-controls-direction a {
-    }
-   .project-info  .bx-wrapper .bx-prev {
-    }
-    .project-info .bx-wrapper .bx-next {
-    }
-    .project-info .contact-us {
-        height: 80px;
-        position: absolute;
-        right: 50px;
-        text-indent: -99999px;
-        width: 250px;
-        bottom:-30px;
-    }
-    .project-info .contact-us img{
-        width:70%;
-        height: 70%;
-    }
-    form.wpcf7-form input, 
-    form.wpcf7-form textarea, 
-    form.wpcf7-form input.wpcf7-submit {
-        min-width: 250px;
-    }
-    .contact-list .download-presentation {
-        width: 50%;
-    }
-    /*footer*/
-    .copyright {
-        float: right;
-    }
-    .footer-social-link{
-        float:none;
-        margin-bottom: 7px;
-        text-align: right;
-    }
-}
+   
+   /**/
 
-@media(max-width:865px){
 
      .why-we-blok-text {
         padding:10px;
@@ -378,6 +378,20 @@
 	}
 
 }
+
+@media(max-width:880px){
+        /*footer*/
+    .copyright {
+        float: right;
+    }
+    .footer-social-link{
+        float:none;
+        margin-bottom: 7px;
+        text-align: right;
+    }
+    
+}
+
 @media(max-width:820px){
     .foot-nav .nav li{
         float:none;
@@ -426,13 +440,16 @@
     .project-info .images{
         width:100%;
         display: block;
+        float:left;
+    }
+    .description_content{
+        padding: 20px 0;
     }
     .project-info .images{
         margin-bottom:0px;
     }
     .project-info .description{
-        padding:15px;
-        height: 320px;
+        height: 320px !important;
     }
     .project-info .bx-pager{display:none;}
     .project-info .description{
@@ -558,4 +575,7 @@
      margin-left: 0px;
     }
     .slide-text a.button{float:right;}
+    .footer-social-link a, .footer-social-link span{
+        font-size:16px;
+    }
 }

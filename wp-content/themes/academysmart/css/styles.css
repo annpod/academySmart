@@ -91,7 +91,7 @@ ul, ol {
 
 /*** follow sections can edit *****************************************************************************/
 HTML, BODY, .basis{
-	height: 100%;
+	//height: 100%;
 	font-family:wf_SegoeUILight, Arial, Helvetica, sans-serif;
 	font-size: 14px;
         color:#000;
@@ -101,12 +101,14 @@ BODY{
     background-color: #f4f4f4 !important;
     padding: 0px !important;
     min-width: 320px;
+	width: 100%;
+       // display: table;
 }
 .basis{
     margin: auto;
     width: 100%;	/* width of basis */
     margin-bottom: -152px;
-    display: table;
+    //display: table;
     height: 100%;
     min-height: 100%;
 }
@@ -423,7 +425,8 @@ nav.type-project a{
     display: inline-block;
     height: 7px;  
     outline: 0 none;
-    text-indent: -9999px;
+    text-indent: 0px;
+	color:transparent;
     width: 15px;
     margin: 0px;
 }
@@ -548,7 +551,7 @@ section{margin-bottom:40px;}
     background: -ms-linear-gradient(top, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 20px); /* IE10+ */
     background: linear-gradient(to bottom, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 20px); /* W3C */
     //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00f4f4f4',GradientType=0 ); /* IE6-9 */
-  border-top:1px solid rgba(196,196,196,0.45);
+    border-top:1px solid rgba(196,196,196,0.45);
 }
 .with-padding{
     padding-top:35px;
@@ -645,11 +648,12 @@ a.read-more{
 }
 .project-info{
     position: relative;
-    display: table;
+	width:100%;
 }
 .project-info .images{
    width:50%;
-   display: table-cell;
+   height:100%;
+   float:left;
 }
 .project-info .images .bx-wrapper .bx-viewport {
     left:0px;
@@ -667,10 +671,10 @@ a.read-more{
     margin:0px;
 }
 .project-info .description{
-    width:50%;    
-    display: table-cell;
+    width:50%;  
+	height:100%;
+	float:right;	
     vertical-align: top;
-    padding: 20px 40px 20px 40px;
     background: -moz-linear-gradient(left, rgba(196,196,196,0.45) 0%, rgba(244,244,244,0) 7%) #fff; /* FF3.6+ */
     background: -webkit-gradient(linear,  top left,  bottom left, color-stop(0%,rgba(196,196,196,0.45)), color-stop 7%,rgba(244,244,244,0)) #fff; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* Chrome10+,Safari5.1+ */
@@ -679,6 +683,9 @@ a.read-more{
     background: linear-gradient(to lefti, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00f4f4f4',GradientType=0 ); /* IE6-9 */
     position: relative;
+}
+.description_content {
+	padding: 20px 40px 20px 40px;
 }
 .description p{
     border-bottom: 1px dotted #eee;
@@ -996,6 +1003,7 @@ footer{
     width:100%;
     min-height:152px;
     padding:40px 0px;
+	display:table;
 }
 
 /*nav*/

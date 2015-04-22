@@ -202,7 +202,17 @@ $(document).ready(function () {
         },
         1000);
     }
+	
+	setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
 });
 
+$(window).resize(function(){
+  setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
+});
 
+function setEqualHeight4blocks(block1, block2)
+{
+ var height = $(block1).height();
+  $(block2).height(height);
 
+}
