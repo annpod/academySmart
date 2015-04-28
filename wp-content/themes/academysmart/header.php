@@ -9,8 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=9">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 		
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>" />
-        <title><?php wp_title('|', true, 'right'); ?></title>
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" rel="icon">
+        <title><?php wp_title('', true); ?></title>
+        <link href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" rel="icon">
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.11.1.min.js" type="text/javascript"></script>
         <!-- bxSlider Javascript file -->
