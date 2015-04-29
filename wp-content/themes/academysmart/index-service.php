@@ -106,4 +106,4 @@ if ($customers) {
 
 </div>
 <!-- /Home Service Section -->	
-</div>
+
