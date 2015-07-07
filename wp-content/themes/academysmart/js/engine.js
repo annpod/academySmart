@@ -107,7 +107,7 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: parseInt($(this).offset().top)
         }, 0);
-
+        return false;
     });
 
 

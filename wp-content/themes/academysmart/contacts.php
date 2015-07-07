@@ -26,18 +26,16 @@
                     </div>
                     <div class="contact-list">
                         <h3>Head Office</h3>
-                        <p class="adress">Street: Academic Pavlov 271, 61054, Harkov, Ukraine</p>                            
-                        <p><a href="mailto:sales@academysmart.com.ua"><i class="fa fa-envelope"></i>sales@academysmart.com.ua</a></p> 
-                        <p><i class="fa fa-phone"></i>+38 (057) 762-66-69 </p>                            
-                        <p><i class="fa fa-fax"></i>+38 (057) 762-66-69</p> 
-                        <p><a href="skype:napoleonchik_"><i class="fa fa-skype"></i>academy_smart</a></p> 
+                        <p class="adress"><?php echo get_post_meta($post->ID, 'adress_company', true) ?></p>                            
+                        <p><a href="mailto:<?php echo get_post_meta($post->ID, 'email_company', true) ?>"><i class="fa fa-envelope"></i><?php echo get_post_meta($post->ID, 'email_company', true) ?></a></p> 
+                        <p><i class="fa fa-phone"></i><?php echo get_post_meta($post->ID, 'phone_company', true) ?></p>                            
+                        <p><i class="fa fa-fax"></i><?php echo get_post_meta($post->ID, 'fax-company', true) ?></p> 
+                        <p><a href="skype:<?php echo get_post_meta($post->ID, 'skype_company', true) ?>"><i class="fa fa-skype"></i><?php echo get_post_meta($post->ID, 'skype_company', true) ?></a></p> 
                         <div class="left download-presentation">
                             <p class="download">Download</p>
                             <p class="presentation">presentation</p>
                         </div>
-                        <div class="left">
-                            <a class="download-btn" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/download-btn.png" alt="Download"/></a>
-                        </div>                            
+                                                
                     </div>
                     <div class="clear"></div>
                 </div>  
