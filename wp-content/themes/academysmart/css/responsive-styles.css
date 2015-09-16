@@ -229,14 +229,12 @@
         min-width: 250px;
     }
 
-.contact-list .download-presentation {
-    width: 47%;
-}
+    .contact-list .download-presentation {
+        width: 47%;
+    }
 }
 
 @media(max-width:865px){
-
-
 .btn.btn-navbar{
         display:block;
     }
@@ -464,13 +462,18 @@
         margin-bottom:0px;
     }
     .project-info .description{
-        height: 320px !important;
+        height: auto !important;
+        padding-bottom:40px; 
     }
     .project-info .bx-pager{display:none;}
     .project-info .description{
         background: none;
     }
     .project-info #bx-pager{display:none;}
+    .project-description{height:auto !important; }
+    
+    .project-info .contact-us{right:0;}
+    
 }
 @media(max-width:740px){
 
@@ -618,10 +621,8 @@
     top: 563px;
    }
    
-   
+  
 }
-
-
 
 
 @media(max-width:405px){ 
@@ -634,7 +635,6 @@
 .contact-wrapper{padding-left:10px;padding-right:10px}
 form.wpcf7-form input, form.wpcf7-form textarea, form.wpcf7-form input.wpcf7-submit{width:100%;max-width:100%;min-width:100%;}   
    
-
    
 }
 @media(max-width:350px){ 

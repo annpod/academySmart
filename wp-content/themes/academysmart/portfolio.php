@@ -36,7 +36,7 @@
                         if ($projects) {
                             foreach ($projects as $project) {
                                 echo '<a href="' . get_the_permalink($project->ID) . '" class="project-item" >';
-                                echo '<div class="project-picture">' . get_the_post_thumbnail($project->ID) . '</div>';
+                                echo '<div class="project-picture">' . get_the_post_thumbnail($project->ID, 'large') . '</div>';
                                 echo '<div class="description">';
                                 echo '<div class="description-wrapper">';
                                 echo '<p class="project-title">' . get_the_title($project->ID) . '</p>';

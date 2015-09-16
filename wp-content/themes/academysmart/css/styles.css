@@ -613,12 +613,19 @@ a.read-more{
 .project-item .project-picture{
 }
 .project-item img{
-    filter: grayscale(100%);
+    filter: grayscale(100%);  
+    -ms-filter: grayscale(100%);  
+    -webkit-filter: grayscale(100%);    
+    -o-filter: grayscale(100%);    
+    -moz-filter: grayscale(100%);    
     height:auto;    
     width:100%;
 }
 .project-item:hover img{
-    filter: grayscale(0%);
+    filter: grayscale(0%);    
+    -webkit-filter: grayscale(0%);    
+    -o-filter: grayscale(0%);    
+    -moz-filter: grayscale(0%);    
 }
 .project-item  .description {
     background-color: #fff;
@@ -693,28 +700,9 @@ a.read-more{
     margin-top:0px;
     padding:7px 0px;
 }
+.description_content ul {list-style-position: inside;}
 /*bxproject*/
-.project-info .bx-pager-link img{
-    width:70px;
-    height: auto;
-    filter: grayscale(100%);
-}
-.project-info #bx-pager a:hover img{
-    filter: grayscale(0%);
-}
-.project-info #bx-pager{
-    position: absolute;
-    bottom:19% !important;
-    right: 9% !important;
-    z-index:3;
-}
-.project-info #bx-pager a{
-   display:inline-block;
-   float:left;
-   margin-left: 5px;
-   border: 1px solid #aaa;
-   margin-right: 10px;
-}
+
 .project-info .bx-wrapper .bx-controls-direction a {
     outline: 0 none;
     position: absolute;
@@ -722,7 +710,7 @@ a.read-more{
     top: 45%;
     z-index: 9999;
 }
-.project-info .bx-wrapper .bx-controls-direction a.bx-next {
+.project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
    right:-107%;
 }
 .project-info  .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
@@ -744,6 +732,46 @@ a.read-more{
       display: block;
 }
 #direction{min-height:404px;}
+.project-info #bxslider-pager img{
+    width:70px;
+    height: auto;
+    filter:gray;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);    
+    -o-filter: grayscale(100%);    
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+}
+.project-info #bxslider-pager li.active img,
+.project-info #bxslider-pager li:hover img{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);    
+    -o-filter: grayscale(0%);    
+    -moz-filter: grayscale(0%);   
+}
+.bxslider-pager-position{
+    position: absolute;
+    bottom:19% !important;
+    right: 12% !important;
+    z-index:3;
+}
+.bxslider-pager-position .bx-controls-direction .bx-prev,
+.bxslider-pager-position .bx-controls-direction .bx-next{
+    height: 31px;
+    width: 18px;   
+}
+.bxslider-pager-position .bx-controls-direction .bx-prev{
+    background: url("../images/carousel-arrow.png") no-repeat  0 0;
+     background-size: 100% auto;
+    left:-25px;
+}
+.bxslider-pager-position .bx-controls-direction .bx-next{
+    background: url("../images/carousel-arrow.png") no-repeat  0 -33px;
+    background-size: 100% auto;
+    right:-25px;
+    
+}
+
 /**/
 .bxgallary .bx-wrapper .bx-pager {
     bottom: -95px;
@@ -763,11 +791,18 @@ a.read-more{
     margin-bottom: 120px;
 }
 .bxgallary img{
-      filter: grayscale(100%);
-      padding:5px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);    
+    -o-filter: grayscale(100%);    
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+    padding:5px;
 }
 .bxgallary li:hover img{
-filter: grayscale(0%);
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);    
+    -o-filter: grayscale(0%);    
+    -moz-filter: grayscale(0%);   
 }
 .bxgallary li{
     margin: 0px;
