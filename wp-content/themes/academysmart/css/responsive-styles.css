@@ -427,12 +427,13 @@
     .why-we-blok {       
         height: auto;
     }
-    .project-info .bx-wrapper .bx-controls-direction a.bx-next {
+    .project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
         right: 10px;
     }
-    .project-info .bx-wrapper .bx-controls-direction a.bx-prev {
+    .project-info #project-images .bx-wrapper .bx-controls-direction a.bx--prev {
         left: 10px;
     }
+    .bxslider-pager-position{display:none;}
     /*contact*/
     .link-item img{
        max-width:100%;

@@ -732,6 +732,7 @@ a.read-more{
       display: block;
 }
 #direction{min-height:404px;}
+.project-info #bxslider-pager li{border:1px solid #ccc;}
 .project-info #bxslider-pager img{
     width:70px;
     height: auto;

@@ -102,7 +102,7 @@
                         echo "<div class='other-progects'>
                         <div class='container'>
                             <div class='title'>
-                                <h2>Other WEB Project</h2>
+                                <h2>Other " . get_the_title($post->post_parent) ." </h2>
                             </div>
                             <ul class='bxgallary'>
                                 {$output}
