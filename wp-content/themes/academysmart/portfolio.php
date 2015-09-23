@@ -22,7 +22,7 @@
                 $project_categories = get_children($args);
                 if ($project_categories) {
                     foreach ($project_categories as $project_category) {
-                        echo '<a class="link-item" id="cat'. $project_category->ID .'" href="#cat'. $project_category->ID .'">' . get_the_post_thumbnail($project_category->ID) . '</a>';
+                        echo '<a class="link-item" id="cat'. $project_category->ID .'" href="#cat'. $project_category->ID .'">' . get_the_post_thumbnail($project_category->ID,'full') . '</a>';
                         echo '<div class="imglist project-holder">';
 
                         $args2 = array(
