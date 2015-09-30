@@ -53,8 +53,8 @@
             <div class="title">
                 <h2>Why we?</h2>
             </div>
-            <div class="why-we-blok">               
-                <div class="why-we-blok-text">
+            <div class="why-we-block">               
+                <div class="why-we-block-text">
                     <div class="why-we">
                     <?php
                     // Start the loop.

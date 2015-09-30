@@ -33,11 +33,11 @@
     p{
         font-size:16px;
     }    
-    .why-we-blok-text {
+    .why-we-block-text {
         font-size: 14px;
         padding: 15px;
     }
-    .why-we-blok-text p{
+    .why-we-block-text p{
         font-size: 14px;
     }
     .title h2{
@@ -92,8 +92,13 @@
     p{
         font-size:14px;
     }
-    .why-we-blok-text p{
+    .why-we-block-text p{
         font-size: 14px;
+    }
+    .why-we-block-text p big {
+        font-size: 18px;
+        line-height: 1.5em;
+        margin: 15px 0;
     }
     .project-item{
         max-width:460px;
@@ -177,13 +182,15 @@
 
 
 @media(max-width:980px){
-	.with-padding {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-    .why-we-blok-text p{
+    .with-padding {
+            padding-left: 10px;
+            padding-right: 10px;
     }
-     .why-we-blok {      
+    .why-we-block-text p{
+    }
+    .why-we-block{ 
+        padding-left:20px;
+        padding-right:20px;
     }
     
    
@@ -345,18 +352,24 @@
    }  
    
    /**/
-
-
-     .why-we-blok-text {
+     .why-we-block-text {
         padding:10px;
         font-size:12px;
     }
-
-    .why-we-blok {       
-       padding:20px 10px;
+    .why-we-block-text p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .why-we-block-text p big {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 10px 0;
+    }
+    .why-we-block {       
+       padding:20px 0px;
        
     }
-    .why-we-blok-text ul{padding-left:0px;}
+    .why-we-block-text ul{padding-left:12px !important;}
     .main-nav .nav li a{
         font-size:13px;
     }  
@@ -424,7 +437,7 @@
     form.wpcf7-form input.wpcf7-submit {
         min-width: 230px;
     }
-    .why-we-blok {       
+    .why-we-block {       
         height: auto;
     }
     .project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
@@ -603,9 +616,6 @@
     }
 }
 @media(max-width:450px){    
-    .why-we-blok img{
-       float:none;    
-    } 
     .slider .bx-wrapper img {
        display: none;
        width:0px;
