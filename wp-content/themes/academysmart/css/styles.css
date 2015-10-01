@@ -719,6 +719,7 @@ a.read-more{
     margin-right: 10px;
     border:1px solid #aaa;
 }
+.bx-pager-link{cursor:pointer;}
 .project-info  .contact-us {
       width:339px;
       height:102px;

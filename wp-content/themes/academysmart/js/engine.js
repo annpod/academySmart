@@ -1,6 +1,15 @@
 // JavaScript Document
 $(document).ready(function () {
-      
+    $('#searchform').submit(function(){
+
+                search_value =$.trim($('#searchform #s').val());
+
+                if(search_value == ""){
+
+                    return false; // You can also pop a notification here to inform to user.
+                }
+
+    });
     /*slider*/
     $('.bxslider').bxSlider({
         mode: 'fade',

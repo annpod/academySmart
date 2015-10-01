@@ -63,16 +63,35 @@
                             ?> 
                          </div>
                         
-                       
+              
                       
                            
                         <div class="description"  id="project-description">
-                                <div class="description_content">
+                                <div class="description_content">                                                                     
                                     <p class="project-title"><strong>Project name: </strong><?php echo get_the_title() ?></p>
-                                    <p class="project-site"><strong>Web-site: </strong> <a href="<?php echo get_post_meta($post->ID, 'project_URL', true) ?>"><?php echo get_post_meta($post->ID, 'project_URL', true) ?></a></p>
-                                    <p class="project-duration"><strong>Duration: </strong> <?php echo get_post_meta($post->ID, 'project_duration', true) ?></p>                
-                                    <p class="project-engine"><strong>Technologies: </strong><?php echo get_post_meta($post->ID, 'project_notes', true) ?></p>
-                                    <p><strong>Summary: </strong><?php echo get_the_content(); ?></p>
+                                    
+                                    <?php $project_URL = get_post_meta($post->ID, 'project_URL', true);
+                                        if ($project_URL <> '') {                                        
+                                            echo '<p class="project-site"><strong>Web-site: </strong> <a href=http://' . get_post_meta($post->ID, 'project_URL', true) .  '>' . get_post_meta($post->ID, 'project_URL', true) .'</a></p>';   
+                                          }
+                                    ?>                                     
+
+                                    <?php $project_duration = get_post_meta($post->ID, 'project_duration', true);
+                                        if ($project_duration <> '') {                                        
+                                            echo '<p class="project-duration"><strong>Duration: </strong>' . get_post_meta($post->ID, 'project_duration', true) . "</p>";   
+                                          }
+                                    ?>
+                                    <?php $project_notes = get_post_meta($post->ID, 'project_notes', true);
+                                        if ($project_notes <> '') {                                        
+                                           echo '<p class="project-engine"><strong>Technologies: </strong>' . get_post_meta($post->ID, 'project_notes', true) ."</p>";
+                                          }
+                                    ?>                       
+                                    <?php $project_content = get_the_content();
+                                        if ($project_content <> '') {                                        
+                                            echo '<p><strong>Summary: </strong>' .  get_the_content() . "</p>";   
+                                          }
+                                    ?>                                     
+                       
                                     <?php $page = get_page_by_title("Contacts"); ?>
                                     <a class="contact-us" href="<?php echo get_permalink($page->ID); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact-us.png" alt="Contact Us" /></a>
                                 </div>
