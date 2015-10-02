@@ -40,7 +40,10 @@
                                 echo '<div class="description">';
                                 echo '<div class="description-wrapper">';
                                 echo '<p class="project-title">' . get_the_title($project->ID) . '</p>';
-                                echo '<p class="project-site">' . get_post_meta($project->ID, 'project_URL', true) . '</p>';
+                                $project_URL = get_post_meta($post->ID, 'project_URL', true);
+                                        if ($project_URL <> '') {                                        
+                                            echo '<p class="project-site">' . get_post_meta($post->ID, 'project_URL', true) .'</a></p>';   
+                                          }
                                 echo '<p class="project-engine">' . get_post_meta($project->ID, 'project_notes', true) . '</p>';
                                 echo '</div>';
                                 echo '</div>';
