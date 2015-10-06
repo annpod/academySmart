@@ -86,15 +86,15 @@ h3{
 }
 
 ul, ol {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
 }
 
 /*** follow sections can edit *****************************************************************************/
 HTML, BODY, .basis{
 	height: 100%;
 	font-family:wf_SegoeUILight, Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
         color:#000;
         margin:0px;
 }
@@ -284,6 +284,7 @@ form#searchform input.search-btn{
     opacity:1;
     list-style:none;
     overflow: hidden;
+    padding-left: 0px;
 }
 .main-nav .nav li.with-sub-menu.active .sub-menu{
     height: 41px;
@@ -517,11 +518,14 @@ section{margin-bottom:40px;}
     line-height: 22px;
     text-align: justify;
 }        
-.why-we-block img{
+img.wp-post-image{
     width:100%;
     margin-bottom:15px;
 }    
-  
+img.main-image{
+    width:100%;
+    margin-bottom:15px;
+} 
 .why-we-block-text p{
     margin-bottom: 5px;
 }
@@ -535,13 +539,23 @@ section{margin-bottom:40px;}
     margin: 20px 0;
     display:block;
 }
-.why-we ul{
-    padding-left: 25px !important;
+ul[type='circle']{
+    padding-left: 45px;
     list-style-image: url("../images/circl.png");
+    margin-bottom:30px;
 }
-.why-we ul li{
-   line-height: 1.4em;
-   margin-bottom:15px;
+ul[type='circle'] li{
+   line-height: 22px;
+   margin-bottom:10px;
+}
+ul ol{
+    list-style-image:none;
+    padding-left: 30px;
+    margin-bottom:0px;
+}
+ul ul{
+    padding-left: 30px;
+    margin-bottom:0px;
 }
 /**/
 .content{
@@ -1013,7 +1027,7 @@ form.wpcf7-form input.wpcf7-submit{
 .sidebar_widget ul li a, .sidebar_widget ul li.recentcomments {
     background:none;
     display: inline;
-    font-family: "RobotoRegular";
+    //font-family: "RobotoRegular";
     font-size: 15px;
     line-height: 20px;
     margin: 0;
@@ -1062,6 +1076,7 @@ form.wpcf7-form input.wpcf7-submit{
 
 /*footer*/
 footer{
+    font-size:14px;
     background-color: #000;
     width:100%;
     min-height:152px;

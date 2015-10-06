@@ -10,7 +10,7 @@
 	<div class="row-fluid">
 		<!-- Blog Main -->
 		<div class="span8 Blog_main">
-                    <div class="blog-holder">
+                    <div class="blog-holder">                       
 			<?php while(have_posts()):the_post();
                             global $more;
                             $more = 0;?>
@@ -39,12 +39,12 @@
 			<?php endwhile ?>
 			<?php wp_link_pages(); ?>
 			<div class="pagination_section">
-			<div class="pagination text-center">	
-			<ul>
-			<li><?php previous_posts_link(); ?></li>
-			<li><?php next_posts_link(); ?></li>
-			</ul>
-			</div>
+                            <div class="pagination text-center">	
+                                <ul>
+                                    <li><?php previous_posts_link(); ?></li>
+                                    <li><?php next_posts_link(); ?></li>
+                                </ul>
+                            </div>
 			</div>
                     </div>
 		</div>
