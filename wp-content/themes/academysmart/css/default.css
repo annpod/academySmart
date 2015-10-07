@@ -977,50 +977,6 @@ blockquote.style1 {
 }
 /**/
 
-/*footer*/
-footer{
-    background-color: #000;
-    width:100%;
-    height:auto;
-    padding:40px 0px 10px;
-}
 
-/*nav*/
-.foot-nav{
-    margin-bottom:20px;
-}
-.foot-nav  .nav {
-    list-style: none;
-    overflow: hidden;
-    border-bottom:1px dotted #515151;
-    display: table;
-    width:100%;    
-}
-.foot-nav .nav > li{
-    height: 60px;
-    display: table-cell;
-    text-align: center;
-}
-.foot-nav  .nav > li:first-child{
-    border-left:none;
-}
-.foot-nav .nav > li >a{
-    font-size:18px;
-    color:#ed1c24;
-    text-decoration: none;
-    padding:0px 15px;
-    white-space: nowrap;
-    padding:0pc 10px;
-}
-.foot-nav  .nav > li > a:hover{
-    color:#ed1c24;
-    background-color: transparent;
-}
-.foot-nav  .nav + li > a{
-    border-color: transparent;
-}
-.foot-nav .dropdown-menu{
-   display:none;
-}
 
 

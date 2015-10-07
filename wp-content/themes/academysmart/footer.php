@@ -8,7 +8,7 @@
     <div class="clearfooter"> </div>
 </div>
 <!-- /main -->
-
+<div class="hide-background"></div>
 </div>
 <footer>
     <div class="container">

@@ -25,6 +25,13 @@
                    <a href="#">NET project</a>|
                    <a href="#">Mobile project</a>
                </nav>
+                
+                
+
+                
+                
+                
+                
                 -->
                 <div class="clear"></div>
                 <?php
@@ -38,28 +45,38 @@
                     <div class="project-info">
                         <div class="images" id="project-images">
                             <?php
-                            echo "<ul id='bxslider'>";
-                            $project_image_ids = get_post_meta($post->ID, 'project_image');
-                            foreach ($project_image_ids as $project_image_id) {
-                                $project_image = wp_get_attachment_image_src($project_image_id, 'full');
-                                echo "<li><img src='$project_image[0]' alt='' /></li>";
+                            $key = 'project_image';
+                            $themeta = get_post_meta($post->ID, $key, TRUE);
+                            if($themeta != '') {
+                                echo "<ul id='bxslider'>";
+                                $project_image_ids = get_post_meta($post->ID, 'project_image');
+                                foreach ($project_image_ids as $project_image_id) {
+                                    $project_image = wp_get_attachment_image_src($project_image_id, 'full');
+                                    if ($project_image !=''){ 
+                                        echo "<li><img src='$project_image[0]' alt='' /></li>";
+                                    }
+                                }
+                                echo "</ul>";
                             }
-                            echo "</ul>";
-                      
                             ?> 
                          </div> 
                         <div class="bxslider-pager-position">
                          <?php
+                            $key = 'project_image';
+                            $themeta = get_post_meta($post->ID, $key, TRUE);
+                            if($themeta != '') {
                             echo "<ul id='bxslider-pager'>";
                                 $project_image_ids = get_post_meta($post->ID, 'project_image');
                                 $i = 0;
                                 foreach ($project_image_ids as $project_image_id) {
                                     $project_image = wp_get_attachment_image_src($project_image_id, 'thumbnail');
-                                    echo "<li  data-slide-index='$i'><a class='bx-pager-link'><img src='$project_image[0]' alt='' /></a></li>";
-                                    $i++;
+                                    if ($project_image !=''){    
+                                        echo "<li  data-slide-index='$i'><a class='bx-pager-link'><img src='$project_image[0]' alt='' /></a></li>";
+                                        $i++;
+                                    }
                                 }
                                 echo "</ul>";
-                           
+                            }
                             ?> 
                          </div>
                         
@@ -101,7 +118,7 @@
                         <?php endwhile;
                         ?>
                     <div class="clearfix"></div>
-			 </div>
+		</div>
                     		
                 <?php
                 $args = array(
@@ -112,11 +129,17 @@
                     'post_status' => 'publish'
                 );
                 $projects = get_children($args);
+                
+                
                 if ($projects) {
                     $output = '';
                     foreach ($projects as $project) {
-                        $output .= "<li><a href=" . get_the_permalink($project->ID) . ">" . get_the_post_thumbnail($project->ID,'medium') . "</a></li>";
+                        
+                        if (has_post_thumbnail($project->ID)){
+                            $output .= "<li><a href=" . get_the_permalink($project->ID) . ">" . get_the_post_thumbnail($project->ID,'medium') . "</a></li>";
+                        }
                     }
+                    
                     if ($output) {
                         echo "<div class='other-progects'>
                         <div class='container'>
@@ -132,9 +155,8 @@
                 }
                 ?>
         
-    </div>
-            
-     </div>
-               </div>  
+             </div>
+        </div>
+    </div>  
 </div>
 <?php get_footer(); ?>

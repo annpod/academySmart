@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function () {
+    /*searchform*/
     $('#searchform').submit(function(){
 
                 search_value =$.trim($('#searchform #s').val());
@@ -17,7 +18,7 @@ $(document).ready(function () {
         controls: false,
         responsive: true,
         pause: 3000,
-        auto: true,
+        auto: true
     });
 
     /*carousel*/
@@ -87,52 +88,45 @@ $(document).ready(function () {
     
     $("#open-close").click(
             function () {
-                $(this).toggleClass("active");
-
-                $("ul#menu-top-nav").toggle();
-                return false;
-            },
-            function () {
-                $(this).toggleClass("active");
-
-                $("ul#menu-top-nav").toggle();
+                 $(".hide-background").addClass("active");
+                 $(".nav").animate({  "right": "0px" }, {duration: 1000} );
                 return false;
             }
-        );
-    
-        $(".sub-menu").parents("li").addClass("with-sub-menu");
-        
-        $(".main-nav>.nav>li.with-sub-menu").hover(
-            function () {
-                $("#sub-menu-bg").toggleClass("active");
-                $(".main-nav>.nav>li.with-sub-menu").toggleClass("active");
-                return false;
-            },
-            function () {
-               $("#sub-menu-bg").toggleClass("active");
-              $(".main-nav>.nav>li.with-sub-menu").toggleClass("active");
-                return false;
-            }
-        );
-   /**/
-        if (location.hash && location.hash != '#') {
-                $(location.hash).next(".project-holder").toggle("slow");
-                $('html, body').animate({
-                    scrollTop: parseInt($(location.hash).offset().top)
-                },
-            1000);
+    );
+  
+    $(".sub-menu").parents("li").addClass("with-sub-menu");
+
+    $(".main-nav>.nav>li.with-sub-menu").hover(
+        function () {
+            $("#sub-menu-bg").toggleClass("active");
+            $(".main-nav>.nav>li.with-sub-menu").toggleClass("active");
+            return false;
+        },
+        function () {
+           $("#sub-menu-bg").toggleClass("active");
+          $(".main-nav>.nav>li.with-sub-menu").toggleClass("active");
+            return false;
         }
-
-	if (location.hash && location.hash != '#') {
-            $(location.hash).next("#direction").toggle("slow");
+    );
+/**/
+    if (location.hash && location.hash != '#') {
+            $(location.hash).next(".project-holder").toggle("slow");
             $('html, body').animate({
                 scrollTop: parseInt($(location.hash).offset().top)
             },
         1000);
     }
-    
-    /*project gallary*/
 
+    if (location.hash && location.hash != '#') {
+        $(location.hash).next("#direction").toggle("slow");
+        $('html, body').animate({
+            scrollTop: parseInt($(location.hash).offset().top)
+        },
+    1000);
+}
+ /**/   
+ /*project gallary*/
+function addProjectSlider(){
     var realSlider= $("ul#bxslider").bxSlider({
         speed:1000,
         pager:false,
@@ -187,8 +181,43 @@ $(document).ready(function () {
       if(slider.getSlideCount()-newIndex>=3)slider.goToSlide(newIndex);
       else slider.goToSlide(slider.getSlideCount()-3);
     }
+}
+/**/
+function setEqualHeight4blocks(block1, block2){
+    var height1 = $(block1).height();
+    var height2 = $(block2).height();
+        if (height1 < 100){
+            $(block1).height(height2);
+            $("bx-loading").hide();
+        }
+        else{
+            $(block2).height(height1);
+        }
+}
+/**/
 
+function mobileMenu(){
+    var widthDocument = $( document ).width();
+    var heightDocument = $( document ).height();
+    var heightWindow = $( window ).height();
+
+    $(".hide-background").click(function() {
+        $(".nav").animate({  "right": "-250px"}, {duration: 1000});
+        $(".hide-background").removeClass("active");
+
+    });
+    $(".right_menu_block_close").click(function() {
+        $(".nav").animate({  "right": "-250px"}, {duration: 1000});
+        $(".hide-background").removeClass("active");
+
+    });
+ }
+
+/**/
+    addProjectSlider();
     setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');    
+    mobileMenu();
+
 
 });
 
@@ -196,11 +225,7 @@ $(window).resize(function(){
   setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
 });
 
-function setEqualHeight4blocks(block1, block2)
-{
- var height = $(block1).height();
-    $(block2).height(height);
-}
+
 
 
 
