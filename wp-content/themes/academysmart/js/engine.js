@@ -3,12 +3,12 @@ $(document).ready(function () {
     /*searchform*/
     $('#searchform').submit(function(){
 
-                search_value =$.trim($('#searchform #s').val());
+        search_value =$.trim($('#searchform #s').val());
 
-                if(search_value == ""){
+        if(search_value == ""){
 
-                    return false; // You can also pop a notification here to inform to user.
-                }
+            return false; // You can also pop a notification here to inform to user.
+        }
 
     });
     /*slider*/

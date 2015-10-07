@@ -19,20 +19,7 @@
                     }
                     ?>
                 </div>                 
-                <!--      
-               <nav class="type-project right">
-                   <a href="#">JAVA project</a>|
-                   <a href="#">NET project</a>|
-                   <a href="#">Mobile project</a>
-               </nav>
-                
-                
 
-                
-                
-                
-                
-                -->
                 <div class="clear"></div>
                 <?php
                 // Start the loop.
