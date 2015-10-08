@@ -1,4 +1,12 @@
 
+@media(max-width:1270px){
+    .project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
+        right: -100%;
+    }
+    .project-info .bx-wrapper .bx-controls-direction a.bx-next {
+            right: -104%;
+    }
+}
 @media(max-width:1240px){
     .wrapper{
         padding-left:20px;
@@ -10,13 +18,10 @@
        padding-left: 10px;
        padding-right: 10px;
     }
-	.project-info .bx-wrapper .bx-controls-direction a.bx-next {
-		right: -104%;
-	}
-	.with-padding {
-	//	padding-left: 30px;
-	//	padding-right: 30px;
-	}
+    .content{
+       padding-left: 0px;
+       padding-right: 0px;
+    }
     .main-nav{
         padding-left:10px;
         padding-right:10px;
@@ -183,8 +188,8 @@
 
 @media(max-width:980px){
     .with-padding {
-            padding-left: 10px;
-            padding-right: 10px;
+          //  padding-left: 10px;
+           // padding-right: 10px;
     }
     .why-we-block-text p{
     }
@@ -228,7 +233,7 @@
     }
     .project-info .contact-us img{
         width:70%;
-        height: 70%;
+        height: 75%;
     }
     form.wpcf7-form input, 
     form.wpcf7-form textarea, 
@@ -242,7 +247,7 @@
 }
 
 @media(max-width:865px){
-    .basis{width:100%;overflow: hidden;}
+    //.basis{width:100%;overflow: hidden;}
     .btn.btn-navbar{
         display:block;
     }
@@ -334,7 +339,7 @@
         height:30px;
     }
 	
-	 .main-nav .nav li.portfolio > a:after{
+    .main-nav .nav li.portfolio > a:after{
         content:"";
         width:0px;
         height:0px;
@@ -416,6 +421,7 @@
 }
 
 @media(max-width:880px){
+    HTML, BODY, .basis{font-size:14px;}
         /*footer*/
     .copyright {
         float: right;
@@ -484,10 +490,15 @@
     .project-info .images{
         width:100%;
         display: block;
-        float:left;
+        float:none;
     }
     .description_content{
         padding: 20px 0;
+    }
+    .project-info #project-images .bx-wrapper::after {
+        background: none;
+        height: 0;
+        width: 0;
     }
     .project-info .images{
         margin-bottom:0px;
@@ -505,6 +516,7 @@
     
     .project-info .contact-us{right:0;}
     
+    HTML, BODY, .basis{font-size:14px;}
 }
 @media(max-width:740px){
 .slider .slide-text{
@@ -512,7 +524,11 @@
     min-width:100%;
     max-width:100%;
 }
-.slider .bx-wrapper .blog_pull_img{width:100%;}
+.slider .bx-wrapper img{
+    width:100%;
+    min-width:100%;
+    max-width:100%;
+}
 }
 @media(max-width:650px){
     .project-item{
@@ -607,6 +623,9 @@
     .content{
         padding-left:0px;
         padding-right:0px;
+    }
+    .breadcrumbs, .breadcrumbs a {
+        font-size:12px;
     }
 }
 

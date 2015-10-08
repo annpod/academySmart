@@ -141,7 +141,6 @@ BODY{
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     max-width: 1170px;
     width:100%;
-    overflow: hidden;
 }
 .container {
     margin-left: auto;
@@ -477,10 +476,17 @@ nav.type-project a{
 }
 .slider ul li img{
    // float:left !important;
-   width:100%;
+  // width:100%;
+}
+.slider .bx-wrapper img {
+    margin-right: 15px;
+    max-width: 45%;
+    width:45%;
+    height:auto;
+    float:left;
 }
 .slider h1{
-    font-size:50px;
+    font-size:38px;
     line-height: 50px;
     color:#545454;
     font-weight: normal;
@@ -543,10 +549,7 @@ section{margin-bottom:40px;}
     line-height: 22px;
     text-align: justify;
 }        
-img.wp-post-image{
-    width:100%;
-    margin-bottom:15px;
-}    
+  
 img.main-image{
     width:100%;
     margin-bottom:15px;
@@ -695,11 +698,26 @@ a.read-more{
 }
 .project-info{
     position: relative;
-	width:100%;
+    width:99%;
+    background:#fff;
+}
+.project-info #project-images .bx-wrapper:after {
+    background: -moz-linear-gradient(left, rgba(196,196,196,0.45) 0%, rgba(244,244,244,0) 100%) #fff; /* FF3.6+ */
+    background: -webkit-gradient(linear,  top left,  bottom left, color-stop(0%,rgba(196,196,196,0.45)), color-stop 100%,rgba(244,244,244,0)) #fff; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 100%) #fff; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 100%) #fff; /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 100%) #fff; /* IE10+ */
+    background: linear-gradient(to lefti, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 100%) #fff; /* W3C */
+    content:'';
+    width:30px;
+    height:100%;
+    position: absolute;
+    top:0;
+    right:-30px;
 }
 .project-info .images{
    width:50%;
-   height:100%;
+  // height:100%;
    float:left;
 }
 .project-info .images .bx-wrapper .bx-viewport {
@@ -713,6 +731,10 @@ a.read-more{
 }
 .project-info img{
     width:100%;
+    min-width: 20px;
+}
+.project-info ul li div{
+    width:100%;
 }
 .project-info .bx-wrapper{
     margin:0px;
@@ -722,14 +744,14 @@ a.read-more{
     height:100%;
     float:right;	
     vertical-align: top;
-    background: -moz-linear-gradient(left, rgba(196,196,196,0.45) 0%, rgba(244,244,244,0) 7%) #fff; /* FF3.6+ */
-    background: -webkit-gradient(linear,  top left,  bottom left, color-stop(0%,rgba(196,196,196,0.45)), color-stop 7%,rgba(244,244,244,0)) #fff; /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* IE10+ */
-    background: linear-gradient(to lefti, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00f4f4f4',GradientType=0 ); /* IE6-9 */
-    position: relative;
+    //background: -moz-linear-gradient(left, rgba(196,196,196,0.45) 0%, rgba(244,244,244,0) 7%) #fff; /* FF3.6+ */
+    //background: -webkit-gradient(linear,  top left,  bottom left, color-stop(0%,rgba(196,196,196,0.45)), color-stop 7%,rgba(244,244,244,0)) #fff; /* Chrome,Safari4+ */
+    //background: -webkit-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* Chrome10+,Safari5.1+ */
+    //background: -o-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* Opera 11.10+ */
+    //background: -ms-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* IE10+ */
+    //background: linear-gradient(to lefti, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 7%) #fff; /* W3C */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00f4f4f4',GradientType=0 ); /* IE6-9 */
+   // position: relative;
 }
 
 .description_content {
@@ -763,7 +785,7 @@ a.read-more{
       width:339px;
       height:102px;
       position: absolute;
-      bottom:-20px;
+      bottom:-17px;
       right:80px;
       text-indent: -99999px;
       display: block;

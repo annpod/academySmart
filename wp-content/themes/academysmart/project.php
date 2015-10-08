@@ -7,9 +7,7 @@
 <?php get_header(); ?>
 <div class="content  with-padding">
     <div class="container">
-        <!-- Blog Section Content -->
         <div class="row-fluid">
-            <!-- Blog Main -->
             <div class="span12 content_main">
 
                 <div class="breadcrumbs left" xmlns:v="http://rdf.data-vocabulary.org/#">
@@ -40,7 +38,7 @@
                                 foreach ($project_image_ids as $project_image_id) {
                                     $project_image = wp_get_attachment_image_src($project_image_id, 'full');
                                     if ($project_image !=''){ 
-                                        echo "<li><img src='$project_image[0]' alt='' /></li>";
+                                        echo "<li><div><img src='$project_image[0]' alt='' /></div></li>";
                                     }
                                 }
                                 echo "</ul>";
