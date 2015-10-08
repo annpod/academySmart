@@ -13,12 +13,13 @@ $(document).ready(function () {
     });
     /*slider*/
     $('.bxslider').bxSlider({
-        mode: 'fade',
+        //mode: 'horizontal',
         pager: true,
         controls: false,
         responsive: true,
         pause: 3000,
-        auto: true
+        //auto: true,
+        adaptiveHeight:true
     });
 
     /*carousel*/
@@ -84,15 +85,7 @@ $(document).ready(function () {
         return false;
     });
     
-    /*close-open menu */
-    
-    $("#open-close").click(
-            function () {
-                 $(".hide-background").addClass("active");
-                 $(".nav").animate({  "right": "0px" }, {duration: 1000} );
-                return false;
-            }
-    );
+
   
     $(".sub-menu").parents("li").addClass("with-sub-menu");
 
@@ -188,29 +181,33 @@ function setEqualHeight4blocks(block1, block2){
     var height2 = $(block2).height();
         if (height1 < 100){
             $(block1).height(height2);
-            $("bx-loading").hide();
+            alert(height1);
         }
         else{
             $(block2).height(height1);
+            alert(height1);
         }
 }
 /**/
-
+$("#open-close").click(
+    function () {
+        $(".hide-background").addClass("active");
+        $(".nav").animate({  "right": "0px" }, {duration: 1000} );
+        return false;
+    }   
+);
 function mobileMenu(){
     var widthDocument = $( document ).width();
     var heightDocument = $( document ).height();
     var heightWindow = $( window ).height();
 
+    
+    
     $(".hide-background").click(function() {
         $(".nav").animate({  "right": "-250px"}, {duration: 1000});
         $(".hide-background").removeClass("active");
 
-    });
-    $(".right_menu_block_close").click(function() {
-        $(".nav").animate({  "right": "-250px"}, {duration: 1000});
-        $(".hide-background").removeClass("active");
-
-    });
+    });    
  }
 
 /**/
@@ -223,6 +220,8 @@ function mobileMenu(){
 
 $(window).resize(function(){
   setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
+
+
 });
 
 

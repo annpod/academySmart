@@ -42,13 +42,13 @@
             </div>
 		</div>
         <div id="direction">
-			<?php
-				// Start the loop.
-				while (have_posts()) : the_post();
-				echo get_post_meta($post->ID, 'google_map_code', true) ;
-				endwhile;
-			?> 
-		</div>
+                <?php
+                    // Start the loop.
+                    while (have_posts()) : the_post();
+                    echo get_post_meta($post->ID, 'google_map_code', true) ;
+                    endwhile;
+                ?> 
+        </div>
     </div>
 </div>
 <?php get_footer();?>

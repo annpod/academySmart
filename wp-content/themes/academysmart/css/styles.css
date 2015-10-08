@@ -141,6 +141,7 @@ BODY{
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     max-width: 1170px;
     width:100%;
+    overflow: hidden;
 }
 .container {
     margin-left: auto;
@@ -167,6 +168,17 @@ nav.site-nav{
     position:absolute;
     top:10px;
     right:10px;
+}
+.btn.btn-navbar {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    display: none;
+    height: 32px;
+    padding: 1px;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    width: 32px;
 }
 nav.site-nav .languages{
    display: inline-block; 
@@ -393,8 +405,8 @@ nav.type-project a{
 .slider {
     background: url("../images/slider-bg.png") no-repeat scroll center top / cover #e7e7e7;
     margin-bottom: 20px;
-    height: 350px;
-    padding-bottom: 10px;
+    min-height: 370px;
+    padding-bottom: 20px;
     padding-top: 40px;
 }
 .bx-wrapper .bx-viewport{left:0px;}
@@ -464,7 +476,8 @@ nav.type-project a{
     list-style: none;
 }
 .slider ul li img{
-    float:left !important;
+   // float:left !important;
+   width:100%;
 }
 .slider h1{
     font-size:50px;
@@ -720,7 +733,7 @@ a.read-more{
 }
 
 .description_content {
-	padding: 20px 40px 90px 40px;
+	padding: 20px 40px 10px 40px;
 }
 .description p{
     border-bottom: 1px dotted #eee;

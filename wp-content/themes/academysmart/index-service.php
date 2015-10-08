@@ -24,7 +24,7 @@
                         
                         setup_postdata( $latest_post );
                         echo '<li>';
-                        echo '<div class="blog_pull_img">';
+                        echo '<div class="blog_pull_img left">';
                             echo get_the_post_thumbnail($latest_post->ID);
                             echo "</div>
                             <div class='slide-text right'>
