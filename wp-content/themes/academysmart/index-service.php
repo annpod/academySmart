@@ -5,9 +5,12 @@
 ?>
 <?php get_header(); ?>
 
-<div class='slider'>
-    <div class='container'>
-        <ul class='bxslider'>
+
+    <div class='slider'>
+        
+
+        <div class="wrapper">
+        <ul class='bxmainslider'>
 
             <?php
                 $argsp = array(
@@ -24,10 +27,10 @@
                         
                         setup_postdata( $latest_post );
                         echo '<li>';
-                        echo '<div class="blog_pull_img">';
-                            echo get_the_post_thumbnail($latest_post->ID);
-                            echo "</div>
-                            <div class='slide-text right'>
+                        
+                            echo get_the_post_thumbnail($latest_post->ID, full);
+                            
+                            echo "<div class='slide-text right'>
                                 <h1>{$latest_post->post_title}</h1>
                                 <p>";
                                    echo apply_filters('the_content', get_the_excerpt());
@@ -41,7 +44,8 @@
                 }
                 ?> 
         </ul>
-    </div>
+        </div>
+   
 </div>
 
 <?php wp_reset_postdata(); // reset the query  ?>

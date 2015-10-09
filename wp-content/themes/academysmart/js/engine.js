@@ -2,27 +2,23 @@
 $(document).ready(function () {
     /*searchform*/
     $('#searchform').submit(function(){
-
         search_value =$.trim($('#searchform #s').val());
-
         if(search_value == ""){
-
             return false; // You can also pop a notification here to inform to user.
         }
-
     });
     /*slider*/
-    $('.bxslider').bxSlider({
+ 
+    $('.bxmainslider').bxSlider({
         mode: 'fade',
         pager: true,
-        controls: false,
-        responsive: true,
+        controls:false,
+        responsive:true,
         pause: 3000,
-        auto: true
-    });
-
+        auto: true,
+        //autoControls: true,
+});
     /*carousel*/
-
     $('.bxcarousel').bxSlider({
         pager: false,
         controls: true,
@@ -32,9 +28,7 @@ $(document).ready(function () {
         moveSlides: 1,
         slideWidth: 195
     });
-
-    /*carousel*/
-   
+    
     /*project gallary*/
     $('.bxgallary').bxSlider({
         pager: false,
@@ -63,7 +57,6 @@ $(document).ready(function () {
     });
     
     /*project menu*/
-
     $(".project-item-link").hover(
             function () {
                 $(this).next(".description-project").show("slow");
@@ -74,7 +67,6 @@ $(document).ready(function () {
     );
 
     /*portfolio scroll*/
-    
     $(".link-item").click(function () {        
         $(this).siblings(".link-item").next(".project-holder").hide();
         $(this).next(".project-holder").toggle("slow");
@@ -83,17 +75,7 @@ $(document).ready(function () {
         }, 0);
         return false;
     });
-    
-    /*close-open menu */
-    
-    $("#open-close").click(
-            function () {
-                 $(".hide-background").addClass("active");
-                 $(".nav").animate({  "right": "0px" }, {duration: 1000} );
-                return false;
-            }
-    );
-  
+      
     $(".sub-menu").parents("li").addClass("with-sub-menu");
 
     $(".main-nav>.nav>li.with-sub-menu").hover(
@@ -125,7 +107,14 @@ $(document).ready(function () {
     1000);
 }
  /**/   
- /*project gallary*/
+
+    addProjectSlider();
+   // setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');    
+    mobileMenu();
+
+
+});
+
 function addProjectSlider(){
     var realSlider= $("ul#bxslider").bxSlider({
         speed:1000,
@@ -183,47 +172,32 @@ function addProjectSlider(){
     }
 }
 /**/
-function setEqualHeight4blocks(block1, block2){
-    var height1 = $(block1).height();
-    var height2 = $(block2).height();
-        if (height1 < 100){
-            $(block1).height(height2);
-            $("bx-loading").hide();
-        }
-        else{
-            $(block2).height(height1);
-        }
-}
-/**/
-
+//function setEqualHeight4blocks(block1, block2){
+  //  var height1 = $(block1).height();
+  //  $(block2).height(height1);
+//}
 function mobileMenu(){
-    var widthDocument = $( document ).width();
-    var heightDocument = $( document ).height();
-    var heightWindow = $( window ).height();
-
+   
+    $("#open-close").click(
+        function () {
+            $(".hide-background").addClass("active");
+            $(".nav").animate({  "right": "0px" }, {duration: 1000} );
+            return false;
+        }   
+    );
     $(".hide-background").click(function() {
         $(".nav").animate({  "right": "-250px"}, {duration: 1000});
         $(".hide-background").removeClass("active");
 
-    });
-    $(".right_menu_block_close").click(function() {
-        $(".nav").animate({  "right": "-250px"}, {duration: 1000});
-        $(".hide-background").removeClass("active");
-
-    });
+    });    
  }
-
 /**/
-    addProjectSlider();
-    setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');    
-    mobileMenu();
-
-
+$(window).resize(function(){    
+    // setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
+    //addProjectSlider();
 });
 
-$(window).resize(function(){
-  setEqualHeight4blocks('.project-info #project-images', '.project-info #project-description');
-});
+
 
 
 
