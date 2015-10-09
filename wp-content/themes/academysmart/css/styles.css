@@ -698,10 +698,10 @@ a.read-more{
 }
 .project-info{
     position: relative;
-    width:99%;
+    width:100%;
     background:#fff;
 }
-.project-info #project-images .bx-wrapper:after {
+.project-info #project-images>.bx-wrapper:after {
     background: -moz-linear-gradient(left, rgba(196,196,196,0.45) 0%, rgba(244,244,244,0) 100%) #fff; /* FF3.6+ */
     background: -webkit-gradient(linear,  top left,  bottom left, color-stop(0%,rgba(196,196,196,0.45)), color-stop 100%,rgba(244,244,244,0)) #fff; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, rgba(196,196,196,0.45) 0%,rgba(244,244,244,0) 100%) #fff; /* Chrome10+,Safari5.1+ */
@@ -773,7 +773,7 @@ a.read-more{
     top: 45%;
     z-index: 9999;
 }
-.project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
+.project-info #project-images >.bx-wrapper .bx-controls-direction a.bx-next {
    right:-107%;
 }
 .project-info  .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
@@ -883,10 +883,10 @@ a.read-more{
       box-shadow: none;
       padding:0px;
 }
-.other-progects{
+.other-projects{
       margin-bottom:40px;
 }
-.other-progects .bx-wrapper .bx-controls-direction a {
+.other-projects .bx-wrapper .bx-controls-direction a {
     outline: 0 none;
     position: absolute;
     text-indent: -9999px;

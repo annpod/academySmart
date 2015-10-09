@@ -1,7 +1,7 @@
 
 @media(max-width:1270px){
     .project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
-        right: -100%;
+        right: -102%;
     }
     .project-info .bx-wrapper .bx-controls-direction a.bx-next {
             right: -104%;
@@ -209,11 +209,11 @@
         margin-bottom:0px;
         padding: 0px;
     }
-    .other-progects .bx-wrapper .bx-controls-direction a.bx-prev  {
+    .other-projects .bx-wrapper .bx-controls-direction a.bx-prev  {
         left: -14px;
         top:55%;
     }
-    .other-progects .bx-wrapper .bx-controls-direction a.bx-next  {
+    .other-projects .bx-wrapper .bx-controls-direction a.bx-next  {
         right: -14px;
         top:55%;
     }
@@ -464,7 +464,7 @@
         height: auto;
     }
     .project-info #project-images .bx-wrapper .bx-controls-direction a.bx-next {
-        right: 10px;
+        right: -10px;
     }
     .project-info #project-images .bx-wrapper .bx-controls-direction a.bx--prev {
         left: 10px;

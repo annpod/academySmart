@@ -31,39 +31,34 @@
                         <div class="images" id="project-images">
                             <?php
                             $key = 'project_image';
-                            $themeta = get_post_meta($post->ID, $key, TRUE);
-                            if($themeta != '') {
-                                echo "<ul id='bxslider'>";
-                                $project_image_ids = get_post_meta($post->ID, 'project_image');
-                                foreach ($project_image_ids as $project_image_id) {
-                                    $project_image = wp_get_attachment_image_src($project_image_id, 'full');
-                                    if ($project_image !=''){ 
-                                        echo "<li><div><img src='$project_image[0]' alt='' /></div></li>";
-                                    }
-                                }
-                                echo "</ul>";
-                            }
-                            ?> 
-                         </div> 
-                        <div class="bxslider-pager-position">
-                         <?php
-                            $key = 'project_image';
-                            $themeta = get_post_meta($post->ID, $key, TRUE);
-                            if($themeta != '') {
-                            echo "<ul id='bxslider-pager'>";
-                                $project_image_ids = get_post_meta($post->ID, 'project_image');
-                                $i = 0;
-                                foreach ($project_image_ids as $project_image_id) {
-                                    $project_image = wp_get_attachment_image_src($project_image_id, 'thumbnail');
-                                    if ($project_image !=''){    
-                                        echo "<li  data-slide-index='$i'><a class='bx-pager-link'><img src='$project_image[0]' alt='' /></a></li>";
+                            $project_images = get_post_meta($post->ID, $key);
+                                                        
+                            $output = '';
+                            $output_pager = '';
+                            $i = 0;
+                            
+                            if(!empty($project_images)) {
+                                foreach ($project_images as $project_image_id) {
+                                    if ($project_image_id != ''){ 
+                                        $project_image = wp_get_attachment_image_src($project_image_id, 'full');
+                                        $project_thumb = wp_get_attachment_image_src($project_image_id, 'thumbnail');
+                                        $output .= "<li><div><img src='$project_image[0]' alt='' /></div></li>";
+                                        $output_pager .= "<li data-slide-index='$i'><a class='bx-pager-link'><img src='$project_thumb[0]' alt='' /></a></li>";
                                         $i++;
                                     }
                                 }
-                                echo "</ul>";
                             }
+                            
+                            if($output) {
+                                echo "<ul id='bxslider'>$output</ul>";
+                                echo "<div class='bxslider-pager-position'>";
+                                    echo "<ul id='bxslider-pager'>$output_pager</ul>";
+                                echo "</div>";
+                            }
+                            
+                            
                             ?> 
-                         </div>
+                         </div> 
                         
               
                       
@@ -126,7 +121,7 @@
                     }
                     
                     if ($output) {
-                        echo "<div class='other-progects'>
+                        echo "<div class='other-projects'>
                         <div class='container'>
                             <div class='title'>
                                 <h2>Other " . get_the_title($post->post_parent) ." </h2>
